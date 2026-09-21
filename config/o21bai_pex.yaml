@@ -13,7 +13,7 @@ settings:
 
 cells:
   INVX1:
-    netlist: "cells/Boolean_pex.spice "      # post-layout (PEX) netlist
+    netlist: "cells/Boolean_pex.spice"      # post-layout (PEX) netlist
     # Physical layout area in um^2 (not derivable from SPICE). Placeholder is
     # the sky130 HD inv_1 std-cell footprint; set to your real layout area.
     area: 34.051
