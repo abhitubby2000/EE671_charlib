@@ -1,5 +1,3 @@
-INVX1_pex.spice 
-
 * NGSPICE file created from INVX1.ext - technology: sky130A
 
 .subckt INVX1 A Y VDD VSS
