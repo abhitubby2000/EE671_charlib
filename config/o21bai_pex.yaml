@@ -12,15 +12,15 @@ settings:
       voltage: 0.0
 
 cells:
-  inverter:
-    netlist: "cells/INVX1_pex.spice"      # post-layout (PEX) netlist
+  INVX1:
+    netlist: "cells/Boolean_pex.spice "      # post-layout (PEX) netlist
     # Physical layout area in um^2 (not derivable from SPICE). Placeholder is
     # the sky130 HD inv_1 std-cell footprint; set to your real layout area.
-    area: 6.004
+    area: 34.051
     models:
       - "config/mc_switches.spice"
       - "sky130A/libs.tech/ngspice/sky130.lib.spice tt"
     data_slews: [0.01, 0.05, 0.1, 0.2]
     loads: [0.001, 0.005, 0.01, 0.05]
     functions:
-      - "Y = !A"
+      - "Y = !(A1|A2)&!B1"
